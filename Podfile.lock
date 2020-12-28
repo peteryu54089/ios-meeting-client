@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.6.0)
+  - CocoaAsyncSocket (7.6.2)
+  - MBProgressHUD (1.1.0)
+  - MJPEGStreamLib (0.2.0)
+  - SwiftSocket (2.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - CocoaAsyncSocket
+  - MBProgressHUD
+  - MJPEGStreamLib
+  - SwiftSocket
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJPEGStreamLib: b6369fb6370413b9f76ef0df2c1cac985ee34bfa
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+
+PODFILE CHECKSUM: 5c0995b0c83b82cea7cf46b9b95f6a5affec4eaa
+
+COCOAPODS: 1.3.1

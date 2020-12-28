@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record View Controller-->
+        <scene sceneID="nHy-sJ-R9Y">
+            <objects>
+                <viewController storyboardIdentifier="Record" id="2Th-hh-IqU" customClass="RecordViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EFC-Xs-Mae"/>
+                        <viewControllerLayoutGuide type="bottom" id="pMS-sJ-fPM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LCR-nf-wAM">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ak1-Vo-ZGK">
+                                <rect key="frame" x="0.0" y="100" width="1366" height="1025"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ak1-Vo-ZGK" secondAttribute="height" multiplier="4:3" id="YBA-M2-KHn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ak1-Vo-ZGK" firstAttribute="top" secondItem="LCR-nf-wAM" secondAttribute="top" constant="100" id="44S-dR-E4H"/>
+                            <constraint firstItem="Ak1-Vo-ZGK" firstAttribute="leading" secondItem="LCR-nf-wAM" secondAttribute="leading" id="Stg-kW-Ljt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ak1-Vo-ZGK" secondAttribute="trailing" id="vKM-hh-QNU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ak1-Vo-ZGK" id="ImB-Ya-EHO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVv-o4-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161.20058565153732" y="51.5625"/>
+        </scene>
+    </scenes>
+</document>

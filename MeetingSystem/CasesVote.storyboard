@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Present Cases Vote View Controller-->
+        <scene sceneID="BEk-wM-oUV">
+            <objects>
+                <viewController storyboardIdentifier="PresentCasesVote" id="7KH-fD-tqb" customClass="PresentCasesVoteViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R0i-Ga-L0g"/>
+                        <viewControllerLayoutGuide type="bottom" id="JY5-yd-2sL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PwQ-r3-pST">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fNn-5f-qvc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f7v-me-JJq">
+                        <barButtonItem key="leftBarButtonItem" title="取消" style="done" id="nSg-NH-MsI">
+                            <connections>
+                                <action selector="back:" destination="7KH-fD-tqb" id="LNV-Nq-1PU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqG-Xd-OyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="1063"/>
+        </scene>
+        <!--Cases Vote Table View Controller-->
+        <scene sceneID="pBl-fy-oqr">
+            <objects>
+                <tableViewController storyboardIdentifier="CasesVoteTableView" id="dZ0-IE-CNN" customClass="CasesVoteTableViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="nAW-Y9-YsW">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="XGB-A7-R4V">
+                            <rect key="frame" x="0.0" y="0.0" width="1112" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觀看單記投票" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-vO-mHw">
+                                    <rect key="frame" x="0.0" y="24" width="1112" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="Ns8-vO-mHw" firstAttribute="centerY" secondItem="XGB-A7-R4V" secondAttribute="centerY" id="Bpk-dD-kRH"/>
+                                <constraint firstItem="Ns8-vO-mHw" firstAttribute="leading" secondItem="XGB-A7-R4V" secondAttribute="leading" id="wNX-Ci-rMr"/>
+                                <constraint firstAttribute="trailing" secondItem="Ns8-vO-mHw" secondAttribute="trailing" id="wvR-Np-Vfz"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="u8m-BN-NTN" customClass="CasesVoteTableViewCell" customModule="MeetingSystem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="1112" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8m-BN-NTN" id="KzW-kt-U37">
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcd-HQ-9Fd">
+                                            <rect key="frame" x="1001" y="12" width="41" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="觀看"/>
+                                            <connections>
+                                                <action selector="view:" destination="u8m-BN-NTN" eventType="touchUpInside" id="ev1-9Z-Dz0"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63p-dI-77l">
+                                            <rect key="frame" x="35" y="18" width="795" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="795" id="Q1i-Ts-oUq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lcd-HQ-9Fd" firstAttribute="centerY" secondItem="KzW-kt-U37" secondAttribute="centerY" id="F2d-hi-YAR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lcd-HQ-9Fd" secondAttribute="trailing" constant="50" id="Lpf-9A-wB8"/>
+                                        <constraint firstItem="63p-dI-77l" firstAttribute="leading" secondItem="KzW-kt-U37" secondAttribute="leadingMargin" constant="15" id="Xqp-7x-q8O"/>
+                                        <constraint firstItem="lcd-HQ-9Fd" firstAttribute="centerY" secondItem="63p-dI-77l" secondAttribute="centerY" id="ZOG-Hn-qBS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fileName" destination="63p-dI-77l" id="Y4p-ZL-OT3"/>
+                                    <outlet property="viewbutton" destination="lcd-HQ-9Fd" id="bdR-a6-z7h"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dZ0-IE-CNN" id="WoW-uH-77c"/>
+                            <outlet property="delegate" destination="dZ0-IE-CNN" id="XMV-EF-CdB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sIK-Q1-IgY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmA-dD-akD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.8201438848921" y="302.87769784172662"/>
+        </scene>
+    </scenes>
+</document>

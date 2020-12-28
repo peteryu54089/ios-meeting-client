@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ad-6w-fjd">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Zgx-kM-zP6">
+            <objects>
+                <viewController id="p7o-oW-PQX" customClass="RootViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsS-AE-pFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="411"/>
+        </scene>
+        <!--MeetingSystem-->
+        <scene sceneID="BZq-Rk-AuA">
+            <objects>
+                <navigationController title="MeetingSystem" toolbarHidden="NO" id="IAh-7X-Izm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXG-3y-uaE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dgW-0S-e4v" kind="relationship" relationship="rootViewController" id="ic1-h4-ePF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1C-rw-OlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="-235"/>
+        </scene>
+        <!--北科會議系統-->
+        <scene sceneID="r0A-kY-46o">
+            <objects>
+                <viewController storyboardIdentifier="RootLeftBar" id="dgW-0S-e4v" customClass="RootLeftBarController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ojL-sZ-fXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nei-hB-0Qb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HWQ-9I-1sE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Fz-4o-31g">
+                                <rect key="frame" x="0.0" y="72" width="375" height="908"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="r4L-Vc-bgf">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r4L-Vc-bgf" id="5xm-xp-aT2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dgW-0S-e4v" id="FUH-IH-bFK"/>
+                                    <outlet property="delegate" destination="dgW-0S-e4v" id="JeV-QM-lYR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7Fz-4o-31g" secondAttribute="trailing" id="Mnm-VQ-bl0"/>
+                            <constraint firstItem="7Fz-4o-31g" firstAttribute="top" secondItem="ojL-sZ-fXZ" secondAttribute="bottom" constant="8" id="Tv1-zd-sWI"/>
+                            <constraint firstItem="7Fz-4o-31g" firstAttribute="leading" secondItem="HWQ-9I-1sE" secondAttribute="leadingMargin" constant="-16" id="X1o-Zw-779"/>
+                            <constraint firstItem="7Fz-4o-31g" firstAttribute="bottom" secondItem="Nei-hB-0Qb" secondAttribute="top" id="c2e-lF-ZFy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="北科會議系統" id="QUg-3Y-hhx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Quo-jb-zCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="-236"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="SkU-2I-lxJ">
+            <objects>
+                <splitViewController preferredPrimaryColumnWidthFraction="0.20000000000000001" id="4Ad-6w-fjd" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="IAh-7X-Izm" kind="relationship" relationship="masterViewController" id="Lk5-29-y3S"/>
+                        <segue destination="p7o-oW-PQX" kind="relationship" relationship="detailViewController" id="fyr-qB-0jn"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tso-DB-cxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="88"/>
+        </scene>
+    </scenes>
+</document>

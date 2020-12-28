@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Score Table View Controller-->
+        <scene sceneID="j9u-Rh-rAM">
+            <objects>
+                <tableViewController storyboardIdentifier="ScoreTableView" id="95d-2R-Pfc" customClass="ScoreTableViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="mjc-in-fqa">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Ojq-2z-rPg">
+                            <rect key="frame" x="0.0" y="0.0" width="1112" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觀看評分投票" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3A-Th-Gqj">
+                                    <rect key="frame" x="0.0" y="24" width="1112" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="J3A-Th-Gqj" secondAttribute="trailing" id="5cF-N1-Fj2"/>
+                                <constraint firstItem="J3A-Th-Gqj" firstAttribute="centerY" secondItem="Ojq-2z-rPg" secondAttribute="centerY" id="b8K-Pf-VST"/>
+                                <constraint firstItem="J3A-Th-Gqj" firstAttribute="leading" secondItem="Ojq-2z-rPg" secondAttribute="leading" id="nQK-dI-NN9"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="1u5-DZ-Fge" customClass="ScoreTableViewCell" customModule="MeetingSystem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="1112" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1u5-DZ-Fge" id="viM-ST-48t">
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-Me-LNW">
+                                            <rect key="frame" x="1001" y="11" width="41" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="觀看"/>
+                                            <connections>
+                                                <action selector="view:" destination="1u5-DZ-Fge" eventType="touchUpInside" id="RDc-gw-hCS"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuJ-1D-INw">
+                                            <rect key="frame" x="35" y="17.5" width="795" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="795" id="xWB-MM-UYy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FuJ-1D-INw" firstAttribute="leading" secondItem="viM-ST-48t" secondAttribute="leadingMargin" constant="15" id="Y4l-oS-wjp"/>
+                                        <constraint firstItem="CKy-Me-LNW" firstAttribute="centerY" secondItem="FuJ-1D-INw" secondAttribute="centerY" id="dry-ly-vyn"/>
+                                        <constraint firstItem="CKy-Me-LNW" firstAttribute="centerY" secondItem="viM-ST-48t" secondAttribute="centerY" id="fR5-hq-fdc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CKy-Me-LNW" secondAttribute="trailing" constant="50" id="sME-UC-YTe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fileName" destination="FuJ-1D-INw" id="tte-Pi-uKU"/>
+                                    <outlet property="viewbutton" destination="CKy-Me-LNW" id="BeW-HB-sK2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="95d-2R-Pfc" id="2b0-Nx-F1m"/>
+                            <outlet property="delegate" destination="95d-2R-Pfc" id="O57-56-aJv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7sg-Uj-3M8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXE-Lq-DVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="340"/>
+        </scene>
+        <!--Present Score View Controller-->
+        <scene sceneID="GpK-2J-Ucr">
+            <objects>
+                <viewController storyboardIdentifier="PresentScore" id="Eky-mF-ByO" customClass="PresentScoreViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uwB-ZA-NJ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LGB-dy-d6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7GA-NW-uvT">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oyn-1e-m4F">
+                        <barButtonItem key="leftBarButtonItem" title="取消" style="done" id="taY-Zz-A8J">
+                            <connections>
+                                <action selector="back:" destination="Eky-mF-ByO" id="Oar-Bi-Vty"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kA-Zt-1FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="1226"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Send File View Controller-->
+        <scene sceneID="rM6-ud-XyE">
+            <objects>
+                <viewController storyboardIdentifier="SendFile" id="MJx-jo-1Wt" customClass="SendFileViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qkh-Jn-AOm"/>
+                        <viewControllerLayoutGuide type="bottom" id="sK0-Fz-KWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ohy-sV-i5k">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-hH-nkT">
+                                <rect key="frame" x="489" y="171" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="MJx-jo-1Wt" eventType="touchUpInside" id="wXs-tU-k4s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TOZ-Jf-Waj">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Mvu-D3-eap">
+                            <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="button1" destination="sCm-hH-nkT" id="aF1-Ui-4sf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rO-98-WzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="297"/>
+        </scene>
+        <!--Send File TableV Iew Controller-->
+        <scene sceneID="sgg-1c-lL8">
+            <objects>
+                <tableViewController storyboardIdentifier="SendFileTableView" id="Olx-2c-z5f" customClass="SendFileTableVIewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="vR1-nd-JnS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="i0O-pq-f1z">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觀看檔案" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfL-FG-Eba">
+                                    <rect key="frame" x="0.0" y="24" width="1024" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="UfL-FG-Eba" secondAttribute="trailing" id="5yW-qg-5Qc"/>
+                                <constraint firstItem="UfL-FG-Eba" firstAttribute="centerY" secondItem="i0O-pq-f1z" secondAttribute="centerY" id="NOQ-fk-3U9"/>
+                                <constraint firstItem="UfL-FG-Eba" firstAttribute="leading" secondItem="i0O-pq-f1z" secondAttribute="leading" id="hvG-x9-b6p"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="dzv-cB-pfE" customClass="FileTableViewCell" customModule="MeetingSystem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="1024" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dzv-cB-pfE" id="kdg-le-7gn">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf4-lp-yD3">
+                                            <rect key="frame" x="913" y="11" width="41" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="觀看"/>
+                                            <connections>
+                                                <action selector="view:" destination="dzv-cB-pfE" eventType="touchUpInside" id="JfE-G6-erJ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-qa-l6l">
+                                            <rect key="frame" x="35" y="17.5" width="795" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="795" id="2A0-6U-M5C"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tf4-lp-yD3" secondAttribute="trailing" constant="50" id="AcU-uu-ZNk"/>
+                                        <constraint firstItem="Tf4-lp-yD3" firstAttribute="centerY" secondItem="FOd-qa-l6l" secondAttribute="centerY" id="edU-5L-LKT"/>
+                                        <constraint firstItem="FOd-qa-l6l" firstAttribute="leading" secondItem="kdg-le-7gn" secondAttribute="leadingMargin" constant="15" id="lZZ-qa-k5V"/>
+                                        <constraint firstItem="Tf4-lp-yD3" firstAttribute="centerY" secondItem="kdg-le-7gn" secondAttribute="centerY" id="sz9-Gq-8oy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fileName" destination="FOd-qa-l6l" id="zzk-8G-EJX"/>
+                                    <outlet property="viewbutton" destination="Tf4-lp-yD3" id="kYu-Xu-ZjK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Olx-2c-z5f" id="9km-8N-xvF"/>
+                            <outlet property="delegate" destination="Olx-2c-z5f" id="jgQ-pw-urO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="On4-xV-OHT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqY-KP-XVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171.875" y="284.375"/>
+        </scene>
+        <!--Present File View Controller-->
+        <scene sceneID="M48-lR-GgX">
+            <objects>
+                <viewController storyboardIdentifier="PresentFile" id="HhB-gn-PL5" customClass="PresentFileViewController" customModule="MeetingSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Zg-sv-3yN"/>
+                        <viewControllerLayoutGuide type="bottom" id="W1b-P3-zdM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNL-NB-Dbd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-yB-EAz">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kg6-yB-EAz" secondAttribute="trailing" constant="-20" id="2uq-N0-gcN"/>
+                            <constraint firstItem="kg6-yB-EAz" firstAttribute="leading" secondItem="bNL-NB-Dbd" secondAttribute="leadingMargin" constant="-20" id="fyI-Sg-jAF"/>
+                            <constraint firstItem="W1b-P3-zdM" firstAttribute="top" secondItem="kg6-yB-EAz" secondAttribute="bottom" id="mBn-3A-Tcu"/>
+                            <constraint firstItem="kg6-yB-EAz" firstAttribute="top" secondItem="8Zg-sv-3yN" secondAttribute="bottom" id="sQU-nl-IDx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SgM-Xa-byA">
+                        <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="ihJ-Oy-dQw">
+                            <connections>
+                                <action selector="back:" destination="HhB-gn-PL5" id="A3Y-wk-MUp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="kg6-yB-EAz" id="cg1-BT-Hh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qre-ob-Xsl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306.8359375" y="284.375"/>
+        </scene>
+    </scenes>
+</document>
